@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BillingBase/BillingBase.iml" filepath="$PROJECT_DIR$/BillingBase/BillingBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BillingClient/BillingClient.iml" filepath="$PROJECT_DIR$/BillingClient/BillingClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BillingServer/BillingServer.iml" filepath="$PROJECT_DIR$/BillingServer/BillingServer.iml" />
+    </modules>
+  </component>
+</project>
+
