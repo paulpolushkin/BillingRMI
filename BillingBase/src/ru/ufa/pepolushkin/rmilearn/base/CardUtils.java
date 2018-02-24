@@ -6,9 +6,9 @@ package ru.ufa.pepolushkin.rmilearn.base;
  */
 public class CardUtils {
 
-	static public void validateCard(Card card) {
-		if (card == null) {
-			throw new NullPointerException("card can not be null");
-		}
-	}
+    static public void validateCard(Card card) {
+        if (card == null) {
+            throw new NullPointerException("card can not be null");
+        }
+    }
 }

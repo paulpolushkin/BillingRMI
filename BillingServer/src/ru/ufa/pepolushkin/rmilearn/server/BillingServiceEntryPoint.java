@@ -9,13 +9,13 @@ import java.rmi.registry.Registry;
  */
 public class BillingServiceEntryPoint {
 
-	public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
-		//System.out.println("Initializing BillingService...");
-		//String serviceName = "rmi://localhost/BillingService";
-		BillingServiceImpl service = new BillingServiceImpl();
-		//Naming.rebind(serviceName, service);
-		Registry registry = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
-		registry.rebind("BillingService", service);
-	}
+        //System.out.println("Initializing BillingService...");
+        //String serviceName = "rmi://localhost/BillingService";
+        BillingServiceImpl service = new BillingServiceImpl();
+        //Naming.rebind(serviceName, service);
+        Registry registry = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
+        registry.rebind("BillingService", service);
+    }
 }
