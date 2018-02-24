@@ -12,42 +12,42 @@ import java.util.HashMap;
  */
 public class BillingServiceImpl extends UnicastRemoteObject implements BillingService {
 
-	final private HashMap<Integer, Card> table = new HashMap<>();
+    final private HashMap<Integer, Card> table = new HashMap<>();
 
-	public BillingServiceImpl() throws RemoteException {
-		super();
-	}
+    public BillingServiceImpl() throws RemoteException {
+        super();
+    }
 
-	@Override
-	public boolean addNewCard(Card card) throws RemoteException {
-		CardUtils.validateCard(card);
-		int cardNumber = card.getCardNumber();
-		synchronized (table) {
-			if (table.get(cardNumber) != null) {
-				return false;
-			}
-			table.put(cardNumber, card);
-		}
-		return true;
-	}
+    @Override
+    public boolean addNewCard(Card card) throws RemoteException {
+        CardUtils.validateCard(card);
+        int cardNumber = card.getCardNumber();
+        synchronized (table) {
+            if (table.get(cardNumber) != null) {
+                return false;
+            }
+            table.put(cardNumber, card);
+        }
+        return true;
+    }
 
-	@Override
-	public void processOperations(CardOperation command) throws RemoteException {
-		synchronized (table) {
-			HashMap<Integer, Card> temp = (HashMap<Integer, Card>) table.clone();
-			CardOperationAdapter adapter = new CardOperationAdapter(command, table);
-			try {
-				adapter.process();
-			} catch (Exception e) {
-				System.err.println(e);
-				table.clear();
-				table.putAll(temp);
-			}
-		}
-	}
+    @Override
+    public void processOperations(CardOperation command) throws RemoteException {
+        synchronized (table) {
+            HashMap<Integer, Card> temp = (HashMap<Integer, Card>) table.clone();
+            CardOperationAdapter adapter = new CardOperationAdapter(command, table);
+            try {
+                adapter.process();
+            } catch (Exception e) {
+                System.err.println(e);
+                table.clear();
+                table.putAll(temp);
+            }
+        }
+    }
 
-	@Override
-	public Card getCard(int cardNumber) throws RemoteException {
-		return table.get(cardNumber);
-	}
+    @Override
+    public Card getCard(int cardNumber) throws RemoteException {
+        return table.get(cardNumber);
+    }
 }

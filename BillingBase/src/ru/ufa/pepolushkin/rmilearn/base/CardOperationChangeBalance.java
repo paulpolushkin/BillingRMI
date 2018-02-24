@@ -8,33 +8,33 @@ import java.util.Date;
  */
 public class CardOperationChangeBalance implements CardOperationCommand {
 
-	private int cardNumber;
-	private double amount;
-	private Date operationDate;
+    private int cardNumber;
+    private double amount;
+    private Date operationDate;
 
-	public CardOperationChangeBalance(int cardNumber, double amount, Date operationDate) {
-		this.cardNumber = cardNumber;
-		this.amount = amount;
-		this.operationDate = operationDate;
-	}
+    public CardOperationChangeBalance(int cardNumber, double amount, Date operationDate) {
+        this.cardNumber = cardNumber;
+        this.amount = amount;
+        this.operationDate = operationDate;
+    }
 
-	@Override
-	public int getCardNumber() {
-		return cardNumber;
-	}
+    @Override
+    public int getCardNumber() {
+        return cardNumber;
+    }
 
-	@Override
-	public double getAmount() {
-		return amount;
-	}
+    @Override
+    public double getAmount() {
+        return amount;
+    }
 
-	@Override
-	public Date getOperationDate() {
-		return operationDate;
-	}
+    @Override
+    public Date getOperationDate() {
+        return operationDate;
+    }
 
-	@Override
-	public void process(Card card) {
-		card.setBalance(card.getBalance() + amount);
-	}
+    @Override
+    public void process(Card card) {
+        card.setBalance(card.getBalance() + amount);
+    }
 }

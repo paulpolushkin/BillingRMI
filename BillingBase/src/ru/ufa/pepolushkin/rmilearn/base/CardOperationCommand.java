@@ -9,12 +9,12 @@ import java.util.Date;
  */
 public interface CardOperationCommand extends Serializable {
 
-	public void process(Card card) throws NotExistsCardOperationException;
+    public void process(Card card) throws NotExistsCardOperationException;
 
-	public int getCardNumber();
+    public int getCardNumber();
 
-	public double getAmount();
+    public double getAmount();
 
-	public Date getOperationDate();
+    public Date getOperationDate();
 
 }

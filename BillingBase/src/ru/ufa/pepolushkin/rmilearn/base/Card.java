@@ -9,55 +9,55 @@ import java.util.Date;
  */
 public class Card implements Serializable {
 
-	private int cardNumber;
-	private String person;
-	private Date createDate = new Date();
-	private double balance = 0;
+    private int cardNumber;
+    private String person;
+    private Date createDate = new Date();
+    private double balance = 0;
 
-	public Card(int cardNumber, String person) {
-		this.cardNumber = cardNumber;
-		this.person = person;
-	}
+    public Card(int cardNumber, String person) {
+        this.cardNumber = cardNumber;
+        this.person = person;
+    }
 
-	public int getCardNumber() {
-		return cardNumber;
-	}
+    public int getCardNumber() {
+        return cardNumber;
+    }
 
-	public void setCardNumber(int cardNumber) {
-		this.cardNumber = cardNumber;
-	}
+    public void setCardNumber(int cardNumber) {
+        this.cardNumber = cardNumber;
+    }
 
-	public String getPerson() {
-		return person;
-	}
+    public String getPerson() {
+        return person;
+    }
 
-	public void setPerson(String person) {
-		this.person = person;
-	}
+    public void setPerson(String person) {
+        this.person = person;
+    }
 
-	public Date getCreateDate() {
-		return createDate;
-	}
+    public Date getCreateDate() {
+        return createDate;
+    }
 
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
 
-	public double getBalance() {
-		return balance;
-	}
+    public double getBalance() {
+        return balance;
+    }
 
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
 
-	@Override
-	public String toString() {
-		return "Card{" +
-				"cardNumber='" + cardNumber + '\'' +
-				", person='" + person + '\'' +
-				", createDate=" + createDate +
-				", balance=" + balance +
-				'}';
-	}
+    @Override
+    public String toString() {
+        return "Card{" +
+                "cardNumber='" + cardNumber + '\'' +
+                ", person='" + person + '\'' +
+                ", createDate=" + createDate +
+                ", balance=" + balance +
+                '}';
+    }
 }

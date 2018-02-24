@@ -11,11 +11,11 @@ public class CardOperation implements Serializable {
 
     private List<CardOperationCommand> commands;
 
-	public CardOperation(List<CardOperationCommand> commands) {
-		this.commands = commands;
-	}
+    public CardOperation(List<CardOperationCommand> commands) {
+        this.commands = commands;
+    }
 
-	public List<CardOperationCommand> getCommands() {
-		return commands;
-	}
+    public List<CardOperationCommand> getCommands() {
+        return commands;
+    }
 }
