@@ -1,7 +1,6 @@
 package ru.ufa.pepolushkin.rmilearn.base;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,7 +9,7 @@ import java.util.List;
  */
 public class CardOperation implements Serializable {
 
-	private List<CardOperationCommand> commands = new ArrayList<>();
+    private List<CardOperationCommand> commands;
 
 	public CardOperation(List<CardOperationCommand> commands) {
 		this.commands = commands;

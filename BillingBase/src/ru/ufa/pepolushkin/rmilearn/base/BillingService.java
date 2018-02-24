@@ -9,10 +9,10 @@ import java.rmi.RemoteException;
  */
 public interface BillingService extends Remote {
 
-	public boolean addNewCard(Card card) throws RemoteException;
+	boolean addNewCard(Card card) throws RemoteException;
 
-	public void processOperations(CardOperation command) throws RemoteException;
+	void processOperations(CardOperation command) throws RemoteException;
 
-	public Card getCard(int cardNumber) throws RemoteException;
+	Card getCard(int cardNumber) throws RemoteException;
 
 }

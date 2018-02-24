@@ -12,7 +12,7 @@ import java.util.HashMap;
  */
 public class BillingServiceImpl extends UnicastRemoteObject implements BillingService {
 
-	private HashMap<Integer, Card> table = new HashMap<>();
+	final private HashMap<Integer, Card> table = new HashMap<>();
 
 	public BillingServiceImpl() throws RemoteException {
 		super();

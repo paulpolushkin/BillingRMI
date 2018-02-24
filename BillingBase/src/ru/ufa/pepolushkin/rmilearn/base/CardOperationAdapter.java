@@ -8,8 +8,8 @@ import java.util.Map;
  */
 public class CardOperationAdapter {
 
-	CardOperation cardOperation;
-	Map<Integer, Card> table;
+	private CardOperation cardOperation;
+	private Map<Integer, Card> table;
 
 	public CardOperationAdapter(CardOperation cardOperation, Map<Integer, Card> table) {
 		this.cardOperation = cardOperation;
